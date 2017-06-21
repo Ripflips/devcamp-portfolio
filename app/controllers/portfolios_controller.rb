@@ -36,15 +36,15 @@ class PortfoliosController < ApplicationController
   end
   
   def show
-     @portfolio_items = Portfolio.find(params[:id])
+     @portfolio_item = Portfolio.find(params[:id])
   end
   
   def destroy
     # Perform the lookup
-    @portfolio_items = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.find(params[:id])
     
     # Destroy/delete the record
-    @portfolio_items.destroy
+    @portfolio_item.destroy
     
     # Redirect
     respond_to do |format|
